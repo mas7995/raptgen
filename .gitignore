@@ -1,0 +1,9 @@
+*.egg-info
+**/*.pyc
+
+out/**
+!out/*/.gitkeep
+**/*-checkpoint.py
+**/.log
+Pipfile.lock
+.vscode/settings.json
