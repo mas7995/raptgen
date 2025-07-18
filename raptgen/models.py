@@ -29,7 +29,7 @@ class CNNRNNVAE(nn.Module):
             super(CNNRNNVAE.EncoderCNNRNN, self).__init__()
 
 
-def train(epochs, model, train_loader, test_loader, optimizer, loss_fn=None, device="cuda", n_print=100, model_str="model.mdl", save_dir=Path("./"), threshold=20, beta=1, beta_schedule=False, force_matching=False, force_epochs=20, logs=True, position=0):
+def train(epochs, model, train_loader, test_loader, optimizer, loss_fn=None, device="cuda", n_print=100, model_str="model.mdl", save_dir=Path("./"), threshold=100, beta=1, beta_schedule=False, force_matching=False, force_epochs=20, logs=True, position=0):
     csv_filename = model_str.replace(".mdl", ".csv")
     if loss_fn == profile_hmm_loss_fn and force_matching:
         logger.info(f"force till {force_epochs}")
